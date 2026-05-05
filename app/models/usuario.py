@@ -20,4 +20,4 @@ class Usuario(Base):
     ativo = Column(Boolean, default=True)
 
     # preenchido automatico pelo banco de dados ao criar o registro
-    criado_em = Column(DateTime, server_default=func.now)
+    criado_em = Column(DateTime, server_default=func.now())

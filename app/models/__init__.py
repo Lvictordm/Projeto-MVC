@@ -1,1 +1,1 @@
-from sqlalchemy import Column, Intenger, String, Boolean, DataTime
+from sqlalchemy import Column, Integer, String, Boolean, DateTime
