@@ -17,6 +17,15 @@ templates = Jinja2Templates(directory="app/templates")
 def tela_cadastro(request: Request):
     return templates.TemplateResponse(
         request, 
-        "auth/cadastrp.hmtl",
+        "auth/cadastro.html",
+        {"request": request}
+    )
+
+#exibir tela de login
+@router.get("/login")
+def tela_login(request: Request):
+    return templates.TemplateResponse(
+        request, 
+        "auth/login.hmtl",
         {"request": request}
     )
