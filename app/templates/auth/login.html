@@ -8,7 +8,7 @@
 <body>
     <h1>Entrar no sistema</h1>
 
-    <form action="/auth/cadastro" method="post">
+    <form action="/auth/login" method="post">
 
         <!-- exibe confirmação apos o cadasyro feito-->
          {% if request.query_params.get("cadastro") == "ok" %}
@@ -22,7 +22,7 @@
         {% if erro %}
             <p style="color: red;">{{erro}}</p>
         {% endif %}
- <button type="submit">Cadastrar</button>
+ <button type="submit">Entrar</button>
 </form>
 
 <p>Ja tem conta ? <a href="/auth/login">Cadastre-se</a></p>

@@ -48,7 +48,7 @@ def decodificar_token(token: str):
 # Dependência do fastapi
 def get_usuario_logado(request: Request):
 
-    token = request.cookies.get("acess_token")
+    token = request.cookies.get("access_token")
 
     if not token:
         raise HTTPException(

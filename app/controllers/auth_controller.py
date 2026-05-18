@@ -105,7 +105,7 @@ def fazer_login(
     response = RedirectResponse(url="/", status_code=302)
 
     response.set_cookie(
-        key="token",
+        key="access_token",
         value=token,
         httponly=True,
         max_age= 3600, #expires em 1 hora(3600 segundos)
@@ -114,3 +114,12 @@ def fazer_login(
     )
     return response
     # redirecionar para a pagina principal
+
+
+# Rota de Sair
+
+@router.get("/logout")
+def sair():
+    response = RedirectResponse(url="/auth/login", status_code=302)
+    response.delete_cookie("access_token")
+    return response
